@@ -1,9 +1,64 @@
+
+
 <html>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <head>
   
 <style>
+body {
+  font-family: 'Lato', sans-serif;
+}
+
+.overla {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.9);
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.overlay-conten {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align:center ;
+  margin-top: 30px;
+}
+
+.overla a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.overla a:hover, .overla a:focus {
+  color: #f1f1f1;
+}
+
+.overla .closebt {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+  .overla a {font-size: 20px}
+  .overla .closebt {
+  font-size: 40px;
+  top: 15px;
+  right: 35px;
+  }
+}
 body {
   font-family: "Lato", sans-serif;
 }
@@ -150,7 +205,30 @@ function closeNav() {
 ________________________________________________________________________________________________________________________________________________________________
 </p>
 
-<img style="-webkit-user-select: none;margin: auto;" src="https://tlauncher.org/res/templates/tlauncher/images/logo_en.png">
+    
+<div id="myNa" class="overla">
+  <a href="javascript:void(0)" class="closebt" onclick="closeNa()">&times;</a>
+  <div>
+   <center><h1 style="font-family:verdana;color:white;font-size:60px;">Minecraft TLauncher</h1></center>
+							<p style="color:white;font-size:20px;">2019 yılı itibariyle Minecraft’ın en çok kullanılan Launcher’ı olarak bilinen TLauncher, sürekli güncellenen versiyonlarıyla Minecraft oynayanların işlerini kolaylaştırmaya devam ediyor.</p>
+<p style="color:white;font-size:20px;">TLauncher ile bilgisayarınıza ücretsiz olarak full sürüm Minecraft indirebilir ve dakikalar içerisinde Minecraft oynamaya başlayabilirsiniz. TLauncher 15 MB gibi küçük boyutu&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; sayesinde en yavaş internet hızlarında dahi hızlıca bilgisayarınızda yer edinebiliyor.</p>
+<p style="color:white;font-size:20px;">TLauncher sayesinde internetten dosya arama ile vakit kaybetmiyorsunuz. Launcher’ı indirip çalıştırdıktan hemen sonra sonra yapmanız gereken tek şey istediğiniz sürümü seçmek ve ardından kısa bir süre beklemektedir. Dosyalar bilgisayarınıza indirildikten sonra TLauncher üzerinden kendi kullanıcı adınızı girerek Minecraft oynamaya devam edebilirsiniz.</p>
+<p style="color:white;font-size:20px;"><strong>Minecraft TLauncher ile Minecraft’ın şuana kadar çıkan tüm sürümlerini bilgisayarınıza indirebilirsiniz.</strong></p><img class="size-medium wp-image-1233 alignright" src="https://www.minecraftindir.net/wp-content/uploads/2019/08/Tlauncher-300x202.png" alt="Tlauncher" width="300" height="202" srcset="https://www.minecraftindir.net/wp-content/uploads/2019/08/Tlauncher-300x202.png 300w, https://www.minecraftindir.net/wp-content/uploads/2019/08/Tlauncher.png 660w" sizes="(max-width: 300px) 100vw, 300px">
+  </div>
+</div>
+
+
+<span style="font-size:30px;cursor:pointer" onclick="openNa()"><img style="-webkit-user-select: none;margin: auto;" src="https://tlauncher.org/res/templates/tlauncher/images/logo_en.png"></span>
+
+<script>
+function openNa() {
+  document.getElementById("myNa").style.width = "100%";
+}
+
+function closeNa() {
+  document.getElementById("myNa").style.width = "0%";
+}
+</script>
 <p></p>
 <img alt="Java'da String'ten int'e Çevirme (Java Convert String to int ..." class="n3VNCb" src="https://www.ridvanuyan.com/wp-content/uploads/2019/05/1__FFpkCWD-KwQmc7oevCRBQ.jpeg" data-noaft="1" jsname="HiaYvf" jsaction="load:XAeZkd;" style="width: 230px; height: 130.8px; margin:0px;">
 <p></p>
