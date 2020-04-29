@@ -1,491 +1,128 @@
+<html lang="tr" class="translated-ltr"><head>
+<link rel="shortcut icon" href="https://img-medianova.mncdn.com/wp-content/uploads/2018/08/favicon-80x80.png" type="image/png">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <title>HATA</title>
 
 
-
-
-<html>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<head>
-  
 <style>
-body {
-  font-family: Arial, Helvetica, sans-serif;
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+body{
+  font-weight:100;
+font-family: 'Montserrat', sans-serif;
+   text-align:center;
+}
+strong{
+  font-weight:900;
+}
+.error_num{font-size: 3em;}
+.error_num{
+ margin-top: 10px;
+ color: #959595;
+}
+.circle{
+  border:solid 5px;
+  height:200px;
+  width:200px;
+  border-radius:100%;
+  float:left;
+ 
 }
 
-* {
-  box-sizing: border-box;
+  .content{text-align:center;width:680px;height:250px;margin:auto;margin-top: 30px;}
+.sub_title{
+  font-size: 2rem;
+  color:#7e7e7e;
+  margin-top: -10px;
 }
+.working{
+  border-color:#00ff00;
+}
+.error{
+  border-color:#ed1c24;
+}
+.graycircle{
+ background-color: #f2f2f2;
+  height:180px;
+  border-radius:100%;
+  margin:10px;
+}
+.step{/* float: left; */width: 210px;margin: auto;}
+.step:not(:last-child) {
+margin-right: 25px !important;
+}
+.step_name{
 
-/* Create a column layout with Flexbox */
-.row {
-  display: flex;
+    font-size: 18px;
+    color: #7e7e7e;
 }
-
-/* Left column (menu) */
-.left {
-  flex: 35%;
-  padding: 15px 0;
-}
-
-.left h2 {
-  padding-left: 8px;
-}
-
-/* Right column (page content) */
-.right {
-  flex: 65%;
-  padding: 15px;
-}
-
-/* Style the search box */
-#mySearch {
-  width: 100%;
-  font-size: 18px;
-  padding: 15px;
-  border: 1px solid #ddd;
-}
-
-/* Style the navigation menu inside the left column */
-#myMenu {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-
-#myMenu li a {
-  padding: 12px;
-  text-decoration: none;
-  color: black;
-  display: block
-}
-
-#myMenu li a:hover {
-  background-color: rgb(124, 252, 0);
-}
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  width: 100000px;
-  background-color: PaleGreen;
-}
-
-li a {
-  display: block;
-  color: #000;
-  padding: 8px 16px;
-  text-decoration: none;
-}
-
-/* Change the link color on hover */
-li a:hover {
-  background-color: #555;
-  color: white;
-}
-body {
-  font-family: 'Lato', sans-serif;
-}
-
-.overla {
-  height: 100%;
-  width: 0;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: rgb(0,0,0);
-  background-color: rgba(0,0,0, 0.9);
-  overflow-x: hidden;
-  transition: 0.5s;
-}
-
-.overlay-conten {
-  position: relative;
-  top: 25%;
-  width: 100%;
-  text-align:center ;
-  margin-top: 30px;
-}
-
-.overla a {
-  padding: 8px;
-  text-decoration: none;
-  font-size: 36px;
-  color: #818181;
-  display: block;
-  transition: 0.3s;
-}
-
-.overla a:hover, .overla a:focus {
-  color: #f1f1f1;
-}
-
-.overla .closebt {
-  position: absolute;
-  top: 20px;
-  right: 45px;
-  font-size: 60px;
-}
-
-@media screen and (max-height: 450px) {
-  .overla a {font-size: 20px}
-  .overla .closebt {
-  font-size: 40px;
-  top: 15px;
-  right: 35px;
-  }
-}
-body {
-  font-family: "Lato", sans-serif;
-}
-
-.sidepanel  {
-  width: 0;
-  position: fixed;
-  z-index: 1;
-  height: 999999px;
-  top: 0;
-  left: 0;
-  background-color: #111;
-  overflow-x: hidden;
-  transition: 0.5s;
-  padding-top: 60px;
-}
-
-.sidepanel a {
-  padding: 8px 8px 8px 32px;
-  text-decoration: none;
-  font-size: 10px;
-  color: #818181;
-  display: block;
-  transition: 0.3s;
-}
-
-.sidepanel a:hover {
-  color: #f1f1f1;
-}
-
-.sidepanel .closebtn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-}
-
-.openbtn {
+.status{
   font-size: 20px;
-  cursor: pointer;
-  background-color: #111;
-  color: white;
-  padding: 10px 15px;
-  border: none;
+  color:#00ff00;
+  font-weight:900;
 }
+.red{color:#ed1c24;}
+.status_icon{
+top: -23px;
+    position: relative;
+}
+.circle_icon{
+  margin:50px}
 
-.openbtn:hover {
-  background-color:#444;
-}
-table, th, td {
-  border: 0px solid black;
-  border-collapse: collapse;
-}
-th, td {
-  padding: 5px;
-  text-align: left;    
-}
-.btn {
-  border: none;
-  color: white;
-  padding: 14px 28px;
-  font-size: 16px;
-  cursor: pointer;
-}
-.suc {background-color: #4CAF50;} /* Green */
-.suc:hover {background-color: #46a049;}
+@media (max-width:690px){
+  
+  .content{
+    width:100%;
+    }
+  .step{
+    /* width:30%; */
+  }
+  .circle{
+    /* width: 90px; */
+    /* height: 90px; */
+    /* margin: auto; */
+    /* margin-left: 50%; */
+    /* position: relative; */
+    /* left: -45px; */
+  }
 
-.success {background-color: #4CAF50;} /* Green */
-.success:hover {background-color: #46a049;}
+  .circle_icon{
+    /* width:40px; */
+    /* margin:20px 0px 0px 0px; */
+  }
 
-.info {background-color: #2196F3;} /* Blue */
-.info:hover {background: #0b7dda;}
-
-.warning {background-color: #ff9800;} /* Orange */
-.warning:hover {background: #e68a00;}
-
-.danger {background-color: #f44336;} /* Red */ 
-.danger:hover {background: #da190b;}
-
-.default {background-color: #e7e7e7; color: black;} /* Gray */ 
-.default:hover {background: #ddd;}
-table, th, td {
-  border: 9px solid w3-container w3-red;
-  border-collapse: collapse;
+  .step:not(:last-child) {
+    margin-right: 2%!important
 }
-th, td {
-  padding: 1px;
-}
-th {
-  text-align: left;
-}
+ .step_name, .status{
+    font-size:14px !important;
+  }
+}s
 </style>
+<link type="text/css" rel="stylesheet" charset="UTF-8" href="https://translate.googleapis.com/translate_static/css/translateelement.css"></head>
+
+<body data-gr-c-s-loaded="false">
+<!-- partial:index.partial.html -->
 
 
-
-<title>YARDIM A.T.D</title>
-</head>
-<body bgcolor="Aquamarine">
-<div class="w3-container w3-red">
-<div id="mySidepanel" class="sidepanel">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-  <p>________________________________</p>
-  <h4>&#160;&#160;&#160;&#160;&#160;&#160;MİNECRAFT</h4>
-  <a href="#">Minecraft modlu oynama</a>
-  <a href="#">Minecraft Kurma</a>
-  <a href="#">Forge Kurma</a>
-  <a href="#">Minecraft Mod Ekleme</a>
-  <p>________________________________</p>
+<br><br>
+<div class="content">
   
-</div>
-
-<button class="openbtn" onclick="openNav()">☰</button>  
-
-<script>
-function openNav() {
-  document.getElementById("mySidepanel").style.width = "250px";
-}
-
-function closeNav() {
-  document.getElementById("mySidepanel").style.width = "0";
-}
-</script>
-
-<button class="btn success">Success</button>
-<button class="btn info">Info</button>
-<button class="btn warning">Warning</button>
-<button class="btn danger">Danger</button>
-<button class="btn default">Default</button>
-<button class="btn suc"onclick="window.location.href='file:///C:/Users/W%C4%B0NDOWS-10/Desktop/ahmettuna/anasayfa.html';">Anasayfa
-
-</div>
-<input type="text" id="mySearch" onkeyup="myFunction()" placeholder="Search.." title="Type in a category">
-<p>_____________________________________________________________________________________________________________________________________________</p>
-<div class="row">
-  <div class="left">
-
-    <ul id="myMenu">
-      <li><a href="#"><span style="font-size:30px;cursor:pointer" onclick="openNa()"><img style="-webkit-user-select: none;margin: auto;" src="https://tlauncher.org/res/templates/tlauncher/images/logo_en.png"></span></a></li>
-      <li><a href="#"><span style="font-size:30px;cursor:pointer" onclick="FORGEs()"><img src="https://files.minecraftforge.net/maven/manage/static/images/logo.svg" width="200"></span></a></li>
-      <li><a href="#">JavaScript</a></li>
-      <li><a href="#">PHP</a></li>
-      <li><a href="#">Python</a></li>
-      <li><a href="#">jQuery</a></li>
-      <li><a href="#">SQL</a></li>
-      <li><a href="#">Bootstrap</a></li>
-      <li><a href="#">Node.js</a></li>
-    </ul>
+ <div class="step">
+<div class="circle error">
+    <div class="graycircle">
+        <img class="circle_icon" src="http://img-medianova.mncdn.com/wp-content/uploads/assets/demo/502/forbidden1.svg?=v01" width="80px">
   </div>
-  
-
-</div>
-
+    </div>
+      <img class="status_icon" src="http://img-medianova.mncdn.com/wp-content/uploads/assets/demo/502/error.svg" width="40px">
+      
     
-<div id="myNa" class="overla">
-  <a href="javascript:void(0)" class="closebt" onclick="closeNa()">&times;</a>
-  <div>
-   <center><h1 style="font-family:verdana;color:white;font-size:60px;">Minecraft TLauncher</h1></center>
-							<p style="color:white;font-size:20px;">2019 yılı itibariyle Minecraft’ın en çok kullanılan Launcher’ı olarak bilinen TLauncher, sürekli güncellenen versiyonlarıyla Minecraft oynayanların işlerini kolaylaştırmaya devam ediyor.</p>
-<p style="color:white;font-size:20px;">TLauncher ile bilgisayarınıza ücretsiz olarak full sürüm Minecraft indirebilir ve dakikalar içerisinde Minecraft oynamaya başlayabilirsiniz. TLauncher 15 MB gibi küçük boyutu&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; sayesinde en yavaş internet hızlarında dahi hızlıca bilgisayarınızda yer edinebiliyor.</p>
-<p style="color:white;font-size:20px;">TLauncher sayesinde internetten dosya arama ile vakit kaybetmiyorsunuz. Launcher’ı indirip çalıştırdıktan hemen sonra sonra yapmanız gereken tek şey istediğiniz sürümü seçmek ve ardından kısa bir süre beklemektedir. Dosyalar bilgisayarınıza indirildikten sonra TLauncher üzerinden kendi kullanıcı adınızı girerek Minecraft oynamaya devam edebilirsiniz.</p>
-<p style="color:white;font-size:20px;"><strong>Minecraft TLauncher ile Minecraft’ın şuana kadar çıkan tüm sürümlerini bilgisayarınıza indirebilirsiniz.</strong></p>
-<p style="color:white">______________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________</p>
- <h1 style="font-family:verdana;color:white;font-size:30px;">Minecraft TLauncher İndirmek İçin Platform Seçin</h1>
-<ul>
-  <li><a href="https://tlauncher.org/installer"><img src="https://www.freeiconspng.com/uploads/windows-png-10.png" width="150" height="50"></a></li>
-  <li><a href="https://tlauncher.org/jar"><img style="-webkit-user-select: none;margin: auto;" src="http://pngimg.com/uploads/linux/linux_PNG23.png" width="120" height="50"></a></li>
-  <li><a href="https://tlauncher.org/jar"><img style="-webkit-user-select: none;margin: auto;" src="https://steemitimages.com/p/2FFvzA2zeqoVJ2SVhDmmumdPfnVEcahMce9nMwwksSDdRvNciR1MPpjK1HkbF6fCNq4n9b6zVERDX4ZC821U7vNu4qPVJPb78ZTzYYC9e3dQAHomamdAJeyaZmyVp?format=match&amp;mode=fit&amp;width=100"></a></li>
-  
-</ul>
-
-  </div>
-</div>
-<div id="FORGE" class="overla">
-  <a href="javascript:void(0)" class="closebt" onclick="FORGE()">&times;</a>
-  <div>
-<blockquote class="postcontent restore ">
-							
+       </div>
  
 
-
-<img src="https://www.maxigame.com/forum/images/araclar/maxayrac3.jpg" border="0" alt="" onload="NcodeImageResizer.createOn(this);"><br>
-<font color="#000000"><b>Minecraft Forge Nedir?<br>
-</b><br>
-Minecraft’ın olmazsa olmazıdır. Birçok eklenti için kurmanız gereken bir API’dir. Mod yapımında kullanmak için birçok ekstra özellikler getirir ve birçok modun çalışması için Minecraft Forge yüklü olması gerekiyor.<br>
-<br>
-<b>Minecraft Forge Nasıl Yüklenir?<br>
-</b></font><br>
-<font color="#555555"><font color="#FF0000"><b>Uyarı: </b></font></font><font color="#000000">Eğer önceden yüklediğiniz modlar varsa sorun yaratacaktır. Temiz bir Minecraft yüklemesi üzerine kurmanız gerekiyor.<br>
-<br>
-<b>Not:</b> Bunları yaparken oyunun kapatı olması gerektiğini söylemeye gerek yok diye düşünüyorum <br>
-<br>
-<b>1.6.X ve 1.7.X için<br>
-</b><br>
-<b>İnstaller ile Tek Tıkla Yükleme<br>
-</b><br>
-Bunun için bilgisayarınızda </font><a href="http://java.com/tr/download/index.jsp" target="_blank" rel="nofollow"><font color="#0000ff">Java Runtime</font></a><font color="#000000"> yüklü olmalıdır!<br>
-</font><br>
-<ol class="decimal"><li style=""><font color="#000000"><span style="font-family: verdana">Oyununu kurulumdan önce bir defa açın ve kapatın,</span></font></li><li style=""><font color="#000000"><span style="font-family: verdana">İndirdiğinix <b>exe</b> veya <b>jar</b> dosyasına çift tıklayın,</span></font></li><li style=""><font color="#000000"><span style="font-family: verdana"><b>Install Client</b>‘i seçin ve <b>OK</b> tuşuna tıklayın,</span></font></li><li style=""><font color="#000000"><span style="font-family: verdana">Kurulumun tamamlanmasını bekleyin ve tamamdır.</span></font></li></ol><br>
-<font color="#000000"><span style="font-family: verdana"><b>İnstaller’siz Yükleme</b><br>
-</span></font><br>
-<ol class="decimal"><li style=""><font color="#000000"><span style="font-family: verdana">İndirdiğiniz installer.jar dosyasını  sağ tıklayarak <b>Birlikte Aç</b> -&gt; <b>JAVA(TM) Platfrom SE Binary</b>ile açın,</span></font></li><li style=""><font color="#000000"><span style="font-family: verdana">Açılan pencereden <b>Install client</b> kutucuğunu işaretleyerek <b>OK</b> tuşuna basın,</span></font></li><li style=""><font color="#000000"><span style="font-family: verdana">Yükleme tamamlandıktan sonra Minecraft dizinini açın (Windows Tuşu + R basarak açılan Çalıştır penceresine “<b>%appdata%/.minecraft/versions</b>” tırnaksız yazıp Enter’a basmanız yeterli),</span></font></li><li style=""><font color="#000000"><span style="font-family: verdana">Burada eğer installer doğru çalıştırılmışsa Forge klasörü olması gerekiyor, bu klasörün acıp 2 forge dosyasını kopyalayın,</span></font></li><li style=""><font color="#000000"><span style="font-family: verdana">Açtığımız Minecraft versions klasörüne bir <b>yeni klasör</b> oluşturup adını <b>mod</b> yapın ve kopyaladığımız 2 forge dosyasını içine yapıştırın,</span></font></li><li style=""><font color="#000000"><span style="font-family: verdana">Bu yapıştırdığımız dosyaların adlarını <b>mod</b> olarak değiştirin (bu işlem sonunda klasörde mod.jar ve mod.json olarak 2 dosya olması gerekiyor),</span></font></li><li style=""><font color="#000000"><span style="font-family: verdana"><b>mod.json</b> dosyasını sağ tıklayarak birlikte aç -&gt; not defteri ile açın,</span></font></li><li style=""><font color="#000000"><span style="font-family: verdana">Not defterinde “id”: “Forge8.9.0.762” satırını “id”: “mod” olarak değiştirip kaydedin.</span></font></li><li style=""><font color="#000000"><span style="font-family: verdana">Minecraft’ı Launcher’dan açın,</span></font></li><li style=""><font color="#000000"><span style="font-family: verdana">Sağ üst kısımdaki <b>New Profile</b> butonuna tıklayın,</span></font></li><li style=""><font color="#000000"><span style="font-family: verdana">Profile Name olarak <b>mod</b> yazın ve Use Version kısmından <b>release mod</b> seçeneğini seçin ve <b>Save Profile</b> butonuna basarak kaydedin.</span></font></li><li style=""><font color="#000000"><span style="font-family: verdana">Launcher penceresindeki sağ üste bulunan <b>Profile</b> bölümünden <b>mod</b>‘u seçerek oyunu oynayabilirsiniz,</span></font></li><li style=""><font color="#000000"><span style="font-family: verdana">İyi oyunlar.</span></font></li></ol><br>
-<font color="#000000"><span style="font-family: verdana"><b>1.5.2 için Nasıl Yüklenir?<br>
-</b></span></font><div class="spoilx">
-<div class="titleee"><img src="images/spoilermax.gif">Gizlenmiş içeriği görüntülemek için tıklayın</div>
-
-<div class="cont" style="display: none;">
-  <div align="left" style="padding: 5px 0px 5px 0px;"><font color="#000000"><span style="font-family: verdana">1. Minecraft’ınızın yüklü olduğu ana dizindeki “<b>bin</b>” klasörüne gidin (genellikle %AppData%\.minecraft\bin),</span><br>
-<br>
-<span style="font-family: verdana">2. Burada bulunan “<b>minecraft.jar</b>” doasyını WinRar ile açın,</span><br>
-<br>
-<span style="font-family: verdana">4. Eğer META-INF adında bir klasör varsa, <b>silin</b>,</span><br>
-<br>
-<span style="font-family: verdana">5. Minecraft Forge dosyalarını WinRar ile açtığınız “minecraft.jar” dosyasına kopyalayın,</span><br>
-<br>
-<span style="font-family: verdana">6. WinRar’ı kapatın,</span><br>
-<br>
-<span style="font-family: verdana">7. Oyunu oynayabilirsiniz, iyi oyunlar.</span><br>
-<span style="font-family: Georgia"><br>
-</span><span style="font-family: verdana"><b>1.5.2 için Nasıl Yüklenir Videosu<br>
-<br>
-</b></span><b>Minecraft Forge MC 1.5.2 için Nasıl Yüklenir Videosu:</b></font><font color="#555555"><span style="font-family: Georgia"><br>
-<br>
-</span></font>
-<iframe title="YouTube video player" width="640" height="390" src="//www.youtube.com/embed/ysxqIoxCs4k?wmode=opaque" frameborder="0" allowfullscreen=""></iframe>
 </div>
-</div>
-</div><font color="#555555"><span style="font-family: Georgia"><br>
-</span></font><span style="font-family: verdana"><br>
-<font color="#000000"><b>Minecraft Forge İndir:</b><br>
-</font></span><font color="#000000"><span style="font-family: Georgia"><br>
-</span><span style="font-family: verdana"><b>1.6.2 ve daha düşük sürümler için linkler</b></span></font><font color="#555555"><span style="font-family: Georgia"><br>
-<br>
-</span></font><div class="spoilx">
-<div class="titleee"><img src="images/spoilermax.gif">Gizlenmiş içeriği görüntülemek için tıklayın</div>
-
-<div class="cont" style="display: none;">
-  <div align="left" style="padding: 5px 0px 5px 0px;"><i><b>Minecraft 1.6.2 için:</b></i><br>
-<a href="http://files.minecraftforge.net/maven/net/minecraftforge/forge/1.6.2-9.10.1.859/forge-1.6.2-9.10.1.859-universal.jar" target="_blank" rel="nofollow"><font color="#0000FF">Minecraft Forge İndir</font></a><font color="#0000FF"><span style="font-family: verdana"><br>
-</span></font><a href="http://www.mediafire.com/download/6o8b11hg5jb26nx/Minecraft-Forge-Universal-1.6.2.jar" target="_blank" rel="nofollow"><font color="#0000FF">Minecraft Forge İndir (Yedek Link 1)</font></a><br>
-<br>
-<i><b>Minecraft 1.6.1 için:</b></i><br>
-<a href="http://files.minecraftforge.net/maven/net/minecraftforge/forge/1.6.1-8.9.0.762/forge-1.6.1-8.9.0.762-installer.jar" target="_blank" rel="nofollow"><font color="#0000FF">Minecraft Forge İndir </font></a><font color="#0000FF"><span style="font-family: verdana"><br>
-</span></font><a href="http://www.dl4.9minecraft.net/index.php?act=dl&amp;id=1372752515" target="_blank" rel="nofollow"><font color="#0000FF">Minecraft Forge İndir (Yedek Link 1)</font></a><br>
-<br>
-<i><b>Minecraft 1.5.2 için:<br>
-</b></i><br>
-<i><b>Installer:</b></i><br>
-<a href="http://www.mediafire.com/download/t561x2dric1farw/minecraft-forge-installer-1.5.2.jar" target="_blank" rel="nofollow"><font color="#0000FF">Minecraft Forge İndir</font></a><br>
-<br>
-<i><b>Universal:</b></i><br>
-<a href="http://www.mediafire.com/download/9u3bm4x3ggjgfqu/minecraftforge-universal-1.5.2-7.8.0.688.zip" target="_blank" rel="nofollow"><font color="#0000FF">Minecraft Forge İndir</font></a><font color="#0000FF"><span style="font-family: verdana"><br>
-</span></font><a href="http://files.minecraftforge.net/minecraftforge/minecraftforge-universal-1.5.2-7.8.0.688.zip" target="_blank" rel="nofollow"><font color="#0000FF">Minecraft Forge İndir (Yedek Link 1)</font></a><font color="#0000FF"><span style="font-family: verdana"><br>
-</span></font><a href="http://www.dl2.9minecraft.net/index.php?act=dl&amp;id=1367503309" target="_blank" rel="nofollow"><font color="#0000FF">Minecraft Forge İndir (Yedek Link 2)</font></a><font color="#0000FF"><span style="font-family: verdana"><br>
-</span></font><a href="http://www.dl4.9minecraft.net/index.php?act=dl&amp;id=1367478537" target="_blank" rel="nofollow"><font color="#0000FF">Minecraft Forge İndir (Yedek Link 3)</font></a><br>
-<br>
-<i><b>Minecraft 1.5.1 için:</b></i><br>
-<a href="http://files.minecraftforge.net/minecraftforge/minecraftforge-universal-1.5.1-7.7.1.651.zip" target="_blank" rel="nofollow"><font color="#0000FF">Minecraft Forge İndir </font></a><font color="#0000FF"><span style="font-family: verdana"><br>
-</span></font><a href="http://www.dl.9minecraft.net/index.php?act=dl&amp;id=1362934355" target="_blank" rel="nofollow"><font color="#0000FF">Minecraft Forge İndir (Yedek Link 1)</font></a><font color="#0000FF"><span style="font-family: verdana"><br>
-</span></font><a href="http://www.dl3.9minecraft.net/index.php?act=dl&amp;id=1362909222" target="_blank" rel="nofollow"><font color="#0000FF">Minecraft Forge İndir (Yedek Link 2)</font></a><font color="#0000FF"><span style="font-family: verdana"><br>
-</span></font><a href="http://www.dl2.9minecraft.net/index.php?act=dl&amp;id=1362934084" target="_blank" rel="nofollow"><font color="#0000FF">Minecraft Forge İndir (Yedek Link 3)</font></a><br>
-<br>
-<i><b>Minecraft 1.4.7 için:</b></i><br>
-<a href="http://files.minecraftforge.net/minecraftforge/minecraftforge-universal-1.4.7-6.6.2.534.zip" target="_blank" rel="nofollow"><font color="#0000FF">Minecraft Forge İndir</font></a><font color="#0000FF"><span style="font-family: verdana"><br>
-</span></font><a href="http://www.dl2.9minecraft.net/index.php?act=dl&amp;id=1356786688" target="_blank" rel="nofollow"><font color="#0000FF">Minecraft Forge İndir (Yedek Link 1)</font></a><font color="#0000FF"><span style="font-family: verdana"><br>
-</span></font><a href="http://www.dl3.9minecraft.net/index.php?act=dl&amp;id=1356786916" target="_blank" rel="nofollow"><font color="#0000FF">Minecraft Forge İndir (Yedek Link 2)</font></a><font color="#0000FF"><span style="font-family: verdana"><br>
-</span></font><a href="http://www.dl.9minecraft.net/index.php?act=dl&amp;id=1356786835" target="_blank" rel="nofollow"><font color="#0000FF">Minecraft Forge İndir (Yedek Link 3)</font></a><br>
-<br>
-<i><b>Minecraft 1.4.6 için:</b></i><br>
-<a href="http://files.minecraftforge.net/minecraftforge/minecraftforge-universal-1.4.6-6.5.0.489.zip" target="_blank" rel="nofollow"><font color="#0000FF">Minecraft Forge İndir</font></a><font color="#0000FF"><span style="font-family: verdana"><br>
-</span></font><a href="http://www.dl2.9minecraft.net/index.php?act=dl&amp;id=1355861197" target="_blank" rel="nofollow"><font color="#0000FF">Minecraft Forge İndir (Yedek Link 1)</font></a><font color="#0000FF"><span style="font-family: verdana"><br>
-</span></font><a href="http://www.dl3.9minecraft.net/index.php?act=dl&amp;id=1355861464" target="_blank" rel="nofollow"><font color="#0000FF">Minecraft Forge İndir (Yedek Link 2)</font></a><font color="#0000FF"><span style="font-family: verdana"><br>
-</span></font><a href="http://www.dl.9minecraft.net/index.php?act=dl&amp;id=1355861217" target="_blank" rel="nofollow"><font color="#0000FF">Minecraft Forge İndir (Yedek Link 3)</font></a></div>
-</div>
-</div><span style="font-family: verdana"><br>
-<br>
-<font color="#000000"><i><b>Minecraft 1.8 için:<br>
-</b></i><br>
-<i><b>Installer Windows (Exe):</b></i></font><br>
-<font color="#555555"><a href="http://www.mediafire.com/download/tjxl42tccjc9eja/forge-1.8-11.14.1.1334-installer-win.exe" target="_blank" rel="nofollow"><img src="https://www.maxigame.com/forum/IMG/cache.php?img=http%3A%2F%2Fmineturk.com%2Fwp-content%2Fthemes%2Fscope%2Fimages%2Fshortcodes%2Fbuttons%2F%2Fmediafire-logo.png" border="0" alt="" onload="NcodeImageResizer.createOn(this);"> </a></font><a href="http://www.mediafire.com/download/tjxl42tccjc9eja/forge-1.8-11.14.1.1334-installer-win.exe" target="_blank" rel="nofollow"><font color="#0000ff">Minecraft Forge indir</font></a><font color="#555555"><a href="https://yadi.sk/d/gw1wPZzQf6QvT" target="_blank" rel="nofollow"><img src="https://www.maxigame.com/forum/IMG/cache.php?img=http%3A%2F%2Fmineturk.com%2Fwp-content%2Fthemes%2Fscope%2Fimages%2Fshortcodes%2Fbuttons%2Fyandex-logo.png" border="0" alt="" onload="NcodeImageResizer.createOn(this);"> </a></font><a href="https://yadi.sk/d/gw1wPZzQf6QvT" target="_blank" rel="nofollow"><font color="#0000ff">Minecraft Forge indir</font></a><font color="#555555"><br>
-</font><br>
-<font color="#000000"><i><b>Installer (Jar):</b></i><br>
-</font><font color="#555555"><a href="http://www.mediafire.com/download/c8uj7bbj0t1ya3p/forge-1.8-11.14.1.1334-installer.jar" target="_blank" rel="nofollow"><img src="https://www.maxigame.com/forum/IMG/cache.php?img=http%3A%2F%2Fmineturk.com%2Fwp-content%2Fthemes%2Fscope%2Fimages%2Fshortcodes%2Fbuttons%2F%2Fmediafire-logo.png" border="0" alt="" onload="NcodeImageResizer.createOn(this);"> </a></font><a href="http://www.mediafire.com/download/c8uj7bbj0t1ya3p/forge-1.8-11.14.1.1334-installer.jar" target="_blank" rel="nofollow"><font color="#0000ff">Minecraft Forge indir</font></a><font color="#555555"> <a href="https://yadi.sk/d/lnsls_Nsf6QxM" target="_blank" rel="nofollow"><img src="https://www.maxigame.com/forum/IMG/cache.php?img=http%3A%2F%2Fmineturk.com%2Fwp-content%2Fthemes%2Fscope%2Fimages%2Fshortcodes%2Fbuttons%2Fyandex-logo.png" border="0" alt="" onload="NcodeImageResizer.createOn(this);"></a></font><a href="https://yadi.sk/d/lnsls_Nsf6QxM" target="_blank" rel="nofollow"><font color="#0000ff"> Minecraft Forge indir</font></a><br>
-<br>
-<font color="#000000"><i><b>Minecraft 1.7.10 için:<br>
-</b></i><br>
-<i><b>Installer Windows (Exe):</b></i></font><br>
-<font color="#555555"><a href="http://www.mediafire.com/download/3c4qg8pku5qy0qi/forge-1.7.10-10.13.2.1291-installer-win.exe" target="_blank" rel="nofollow"><img src="https://www.maxigame.com/forum/IMG/cache.php?img=http%3A%2F%2Fmineturk.com%2Fwp-content%2Fthemes%2Fscope%2Fimages%2Fshortcodes%2Fbuttons%2F%2Fmediafire-logo.png" border="0" alt="" onload="NcodeImageResizer.createOn(this);"> </a></font><a href="http://www.mediafire.com/download/3c4qg8pku5qy0qi/forge-1.7.10-10.13.2.1291-installer-win.exe" target="_blank" rel="nofollow"><font color="#0000ff">Minecraft Forge indir</font></a><font color="#555555"><a href="https://yadi.sk/d/RjYXb6XefuqWL" target="_blank" rel="nofollow"><img src="https://www.maxigame.com/forum/IMG/cache.php?img=http%3A%2F%2Fmineturk.com%2Fwp-content%2Fthemes%2Fscope%2Fimages%2Fshortcodes%2Fbuttons%2Fyandex-logo.png" border="0" alt="" onload="NcodeImageResizer.createOn(this);"></a></font><a href="https://yadi.sk/d/RjYXb6XefuqWL" target="_blank" rel="nofollow"><font color="#0000ff"> Minecraft Forge indir</font></a><font color="#555555"><br>
-</font><br>
-<font color="#000000"><i><b>Installer (Jar):</b></i><br>
-</font><font color="#555555"><a href="http://www.mediafire.com/download/86r3l57t85znn00/forge-1.7.10-10.13.2.1291-installer.jar" target="_blank" rel="nofollow"><img src="https://www.maxigame.com/forum/IMG/cache.php?img=http%3A%2F%2Fmineturk.com%2Fwp-content%2Fthemes%2Fscope%2Fimages%2Fshortcodes%2Fbuttons%2F%2Fmediafire-logo.png" border="0" alt="" onload="NcodeImageResizer.createOn(this);"></a></font><a href="http://www.mediafire.com/download/86r3l57t85znn00/forge-1.7.10-10.13.2.1291-installer.jar" target="_blank" rel="nofollow"><font color="#0000ff"> Minecraft Forge indir</font></a><font color="#555555"><a href="https://yadi.sk/d/Dqv1Oys3fuqa8" target="_blank" rel="nofollow"><img src="https://www.maxigame.com/forum/IMG/cache.php?img=http%3A%2F%2Fmineturk.com%2Fwp-content%2Fthemes%2Fscope%2Fimages%2Fshortcodes%2Fbuttons%2Fyandex-logo.png" border="0" alt="" onload="NcodeImageResizer.createOn(this);"> </a></font><a href="https://yadi.sk/d/Dqv1Oys3fuqa8" target="_blank" rel="nofollow"><font color="#0000ff">Minecraft Forge indir</font></a><br>
-<br>
-<font color="#000000"><i><b>Minecraft 1.7.2 için:<br>
-</b></i><br>
-<i><b>Installer (Jar):</b></i></font><br>
-<a href="http://www.mediafire.com/download/s3173u903r386dm/forge-1.7.2-10.12.2.1121-installer.jar" target="_blank" rel="nofollow"><font color="#0000ff">Minecraft Forge indir</font></a><br>
-<br>
-<font color="#000000"><i><b>Minecraft 1.6.4 için:</b></i><br>
-</font><a href="http://www.mediafire.com/download/tvpd9zwbhd9z1gc/forge-1.6.4-9.11.1.953-installer.jar" target="_blank" rel="nofollow"><font color="#0000ff">Minecraft Forge indir</font></a><font color="#555555"><br>
-</font><br>
-<font color="#000000"><b>Minecraf Forge Kaynak Kodları (Yapımcılar İçin):<br>
-</b><br>
-Minecraft Forge kaynak kodlarını</font> <a href="http://files.minecraftforge.net/minecraftforge/minecraftforge-src-1.5.1-7.7.1.651.zip" target="_blank" rel="nofollow"><font color="#0000ff"><b>buradan</b> </font></a><font color="#000000">indirebilirsiniz.</font></span> 
+<div class="error_num"> <strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">YAPIM AŞAMASINDA!</font></font></strong><br></div><p class="sub_title"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">A.T.D</font></font></p><!-- partial --><div id="goog-gt-tt" class="skiptranslate" dir="ltr"><div style="padding: 8px;"><div><div class="logo"><img src="https://www.gstatic.com/images/branding/product/1x/translate_24dp.png" width="100" height="20" alt="Google Çeviri"></div></div></div><div class="top" style="padding: 8px; float: left; width: 100%;"><h1 class="title gray">Orijinal metin</h1></div><div class="middle" style="padding: 8px;"><div class="original-text"></div></div><div class="bottom" style="padding: 8px;"><div class="activity-links"><span class="activity-link">Daha iyi bir çeviri ile katkıda bulunun</span><span class="activity-link"></span></div><div class="started-activity-container"><hr style="color: #CCC; background-color: #CCC; height: 1px; border: none;"><div class="activity-root"></div></div></div><div class="status-message" style="display: none;"></div></div>
+  
 
 
-
-</blockquote>
-  </div>
-</div>
-
-<span style="font-size:30px;cursor:pointer" onclick="FORGEs()"><img src="https://files.minecraftforge.net/maven/manage/static/images/logo.svg" width="200"></span>
-
-<script>
-function openNa() {
-  document.getElementById("myNa").style.width = "100%";
-}
-
-function closeNa() {
-  document.getElementById("myNa").style.width = "0%";
-}
-</script>
-<script>
-function FORGEs() {
-  document.getElementById("FORGE").style.width = "100%";
-}
-
-function FORGE() {
-  document.getElementById("FORGE").style.width = "0%";
-}
-</script>
-<p></p>
-<img alt="Java'da String'ten int'e Çevirme (Java Convert String to int ..." class="n3VNCb" src="https://www.ridvanuyan.com/wp-content/uploads/2019/05/1__FFpkCWD-KwQmc7oevCRBQ.jpeg" data-noaft="1" jsname="HiaYvf" jsaction="load:XAeZkd;" style="width: 230px; height: 130.8px; margin:0px;">
-<p></p>
-<img alt="W3Schools – Internet Salmagundi" class="n3VNCb" src="https://internet-salmagundi.com/wp-content/uploads/2019/03/W3-MatFrame-895x493px-Qual100.jpg" data-noaft="1" jsname="HiaYvf" jsaction="load:XAeZkd;" style="width: 300px; height: 200.513px; margin: 2px;">
-<script>
-function myFunction() {
-  var input, filter, ul, li, a, i;
-  input = document.getElementById("mySearch");
-  filter = input.value.toUpperCase();
-  ul = document.getElementById("myMenu");
-  li = ul.getElementsByTagName("li");
-  for (i = 0; i < li.length; i++) {
-    a = li[i].getElementsByTagName("a")[0];
-    if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
-      li[i].style.display = "";
-    } else {
-      li[i].style.display = "none";
-    }
-  }
-}
-</script>
-</body>
-</html>
-
-
+<div class="goog-te-spinner-pos"><div class="goog-te-spinner-animation"><svg xmlns="http://www.w3.org/2000/svg" class="goog-te-spinner" width="96px" height="96px" viewBox="0 0 66 66"><circle class="goog-te-spinner-path" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30"></circle></svg></div></div></body></html>
